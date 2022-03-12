@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Meme banaoo</title>
+    <link rel='stylesheet', type='text/css', href='css/home.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    </head>
+  <body>
+    <div class="item"></div>
+    <div id="headerdiv"> 
+        <div id="headerlogo"></div>
+        <p id="headerpare"> 😂Memebanao😂</p>
+    </div>
+    <div id="maindiv">
+        <div id=secondarydiv>
+            <div id=canvas>
+                <input id="imageupload" type="file" name="imageupload" placeholder="Upload image" accept="image/*" onchange="addimage(event)" style="display:none;">
+                <label id="imageuploadlabel" for="imageupload"> Upload image</label>
+                <div id=canvasdiv>
+                    <div id="canvastext00" class="canvastextfield" onmousedown="draging(this,event)">
+                        <p> hello </p>
+                        <div class="resizer top-left" onmousedown="resizing(this,event)"></div>
+                        <div class="resizer top-right" onmousedown="resizing(this,event)"></div>
+                        <div class="resizer bottom-left" onmousedown="resizing(this,event)"></div>
+                        <div class="resizer bottom-right" onmousedown="resizing(this,event)"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="form" class="scroll">
+                <iframe name="dummyframe" style="display:none;"></iframe>
+                <form id="forms" target="dummyframe">
+                    <div id="buttondiv">
+                        <button onclick="addtextfield()" name="addtext"> Add text field +</button>
+                        <button onclick="makememe()"> Make meme</button>
+                    </div>
+                    <div id="0"class="deletetextfields">
+                        <label id="textinput" for="text1"> Text 1</label>
+                        <input type="number" placeholder="20" value="20">
+                        <input type="color" placeholder="#000000" value="#000000"> 
+                        <input  type="color" placeholder="#ffffff" value="#ffffff">
+                        <input type="number"  placeholder="1" value="1"> 
+                        <button onclick="deletetextfield(this)"> Delete</button>
+                    </div>
+                    <input id="text00"class="textinputlabel"type="text" name="text1" placeholder="Add text" onchange="addline(this)">
+                </form>
+            </div>
+        </div>
+    </div>
+  </body>
+    <script src="js/index.js"></script>
+</html>
