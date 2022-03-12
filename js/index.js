@@ -79,14 +79,14 @@ function addline(ele){
   for(let i=1;i<text.length;i++){
     values[i-1]=text[i].value;
   }
-  child[0].innerHTML=ele.value;  
-  child[0].style.fontSize=values[0]+"px";
-  child[0].style.webkitTextStrokeColor=values[1];
-  child[0].style.webkitTextFillColor=values[2];
-  if(values[3]>=10){
+  child[1].innerHTML=ele.value;  
+  child[1].style.fontSize=values[2]+"px";
+  child[1].style.webkitTextStrokeColor=values[6];
+  child[1].style.webkitTextFillColor=values[4];
+  if(values[8]>=10){
     alert("This will look bad 🤦‍♂️")
   }
-  child[0].style.webkitTextStrokeWidth=values[3]+"px";
+  child[1].style.webkitTextStrokeWidth=values[8]+"px";
 }
 
 
